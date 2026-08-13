@@ -23,6 +23,16 @@ const projectsData = [
     githubUrl: 'https://github.com/FabricioBartz/Academia-Fatout',
     liveUrl: 'https://academia-fatout.onrender.com/',
     imageUrl: '/projects/academia-fatout.png'
+  },
+  {
+    id: 3,
+    title: 'Editor de Cena 3D',
+    category: 'Editor de Cenários Tridimensionais Interativo',
+    description: 'Permite posicionar, transformar e organizar hierarquicamente modelos 3D de uma temática de Halloween, com exportação/importação de cenas em JSON.',
+    technologies: ['JavaScript', 'WebGL2', 'GLSL', 'HTML5 Canvas'],
+    githubUrl: 'https://github.com/FabricioBartz/editorDeCena',
+    liveUrl: 'https://fabriciobartz.github.io/editorDeCena/',
+    imageUrl: '/projects/editor-de-cena.png'
   }
 ];
 
