@@ -1,0 +1,16 @@
+.backArrow {
+  position: fixed;
+  top: 2rem;       /* Distância do topo da tela */
+  left: 2rem;      /* Distância da esquerda da tela */
+  color: #ffffff;  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  z-index: 10;     /* Garante que fique acima do plano de fundo */
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.backArrow:hover {
+  color: #47baf8;
+}

@@ -1,0 +1,23 @@
+.skillCard {
+  background-color: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.skillCard:hover {
+  border-color: rgba(71, 186, 248, 0.4);
+}
+
+.skillCard h3 {
+  color: #47baf8;
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.skillCard p {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
+}

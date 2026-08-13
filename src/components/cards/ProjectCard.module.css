@@ -1,0 +1,155 @@
+.projectCard {
+  background-color: #1e293b;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: row;
+}
+
+.projectCard:hover {
+  border-color: rgba(71, 186, 248, 0.4);
+}
+
+.imageWrapper {
+  width: 35%; /* Define a largura da imagem no card */
+  min-width: 220px;
+  max-width: 320px;
+  flex-shrink: 0;
+  background-color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.coverImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Faz a imagem preencher toda a altura sem distorcer */
+  object-position: top center;
+  display: block;
+  object-fit: contain;
+  /* Centraliza a imagem no container */
+  object-position: center; 
+  padding: 0.5rem; 
+  box-sizing: border-box;
+}
+
+/* Conteúdo do Card (Lado Direito) */
+.cardContent {
+  flex: 1;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Distribui o conteúdo e empurra os botões para a base */
+  gap: 1.25rem;
+}
+
+.titleGroup {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 0.5rem; /* Aumenta a distância entre "CALCULADORA DE INSUMOS..." e "AgroHub" */
+  margin-bottom: 0.75rem; /* Afasta o título do texto de descrição */
+}
+
+.categoryBadge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  color: #47baf8;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.projectTitle {
+  font-size: 1.6rem;
+  font-weight: 800;
+  margin: 0;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.projectDescription {
+  color: #d1d5db;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Tags de Tecnologias */
+.techTags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+ 
+}
+
+.techTag {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #9ca3af;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.35rem 0.75rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+/* Botões de Ação */
+.cardActions {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.actionButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1.25rem;
+  border-radius: 6px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  background-color: transparent;
+  color: #47baf8;
+  border: 1px solid #47baf8;
+  transition: all 0.2s ease;
+}
+
+.actionButton:hover {
+  background-color: rgba(71, 186, 248, 0.1);
+}
+
+.primaryButton {
+  background-color: #47baf8;
+  color: #ffffff;
+}
+
+.primaryButton:hover {
+  background-color: #3386b3;
+  border-color: #3386b3;
+}
+
+/* Responsividade (Para celulares, volta a ficar topo/base) */
+@media (max-width: 768px) {
+  .projectCard {
+    flex-direction: column;
+  }
+
+  .imageWrapper {
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
+    height: 200px;
+  }
+
+  .cardActions {
+    flex-direction: column;
+  }
+
+  .actionButton {
+    width: 100%;
+    box-sizing: border-box;
+  }
+}

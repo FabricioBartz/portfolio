@@ -1,0 +1,156 @@
+.wrapper {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: #0f172a;
+  color: #ffffff;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.cardContainer {
+  width: 100%;
+  max-width: 650px;
+  box-sizing: border-box;
+}
+
+.container {
+  width: 100%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;    
+  color: #ffffff;
+  border-radius: 10px; 
+}
+
+/* Cabeçalho */
+.header {
+  text-align: center;
+  padding: 3rem 1.5rem;
+  
+}
+
+.subtitle {
+  color: #ffffff; 
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: #d1d5db;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  max-width: 500px;
+  margin: 0 auto;
+  font-family: serif; 
+}
+
+/* Formulário */
+.form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.inputGroup {
+  width: 100%;
+}
+
+/* Estilo Minimalista dos Inputs (Linha Inferior) */
+.input, 
+.textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #333333; 
+  padding: 0.85rem 0.5rem;
+  color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Destaque ao clicar/focar no campo */
+.input:focus, 
+.textarea:focus {
+  border-bottom-color: #00bcd4;
+}
+
+.input::placeholder, 
+.textarea::placeholder {
+  color: #888888;
+}
+
+/* Botão Enviar */
+.button {
+  width: 100%;
+  padding: 0.9rem;
+  margin-top: 1rem;
+  background-color: #47baf8; 
+  color: #ffffff;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+
+.button:hover {
+  background-color: #3386b3;
+}
+
+.button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Mensagem de Feedback */
+.statusMessage {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #00bcd4;
+}
+
+/* Link / Botão do E-mail */
+.emailLink {
+  display: inline-block;
+  margin-top: 0.75rem;
+  color: #47baf8;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  border: none;
+  border-bottom: 1px dashed transparent;
+  background: transparent;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+.emailLink:hover {
+  opacity: 0.85;
+  border-bottom-color: #47baf8;
+}

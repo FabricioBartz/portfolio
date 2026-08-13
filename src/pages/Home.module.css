@@ -1,0 +1,142 @@
+.container {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  padding: 0 1rem;
+}
+
+
+.title {
+  font-size: 84px;
+  margin-bottom: 0.5rem;
+  white-space: nowrap;
+  font-size: clamp(2.00rem, 6vw, 5.25rem);
+}
+
+.subtitle {
+  font-size: clamp(0.875rem, 3.5vw, 1.25rem);
+  color: #9ca3af;
+  margin-bottom: 2rem;
+  max-width: 28rem;
+}
+
+/* Estilo do botão */
+.button {
+  background-color: transparent;
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background-color 0.2s;
+  
+  color: #47baf8; /* Cor azul */
+  text-transform: uppercase; /* Caixa alta */
+  letter-spacing: 0.15em; /* Espaçamento entre letras para dar o visual da imagem */
+  font-weight: 600;
+  font-size: clamp(0.75rem, 1.5vw, 0.875rem);
+  padding: clamp(0.4rem, 1vw, 0.75rem) clamp(0.75rem, 2vw, 1.5rem);
+  white-space: nowrap;
+}
+
+.button:hover {
+  color: #3386b3;
+}
+
+/* Estilo do grupo de botões */
+.buttonGroup {
+  display: flex;
+  flex-direction: row; /* Coloca os botões lado a lado */
+  gap: 1rem;           /* Cria um espaço entre os botões */
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.5rem, 2vw, 1.5rem);
+
+  /* Fundo escuro semi-transparente */
+  background: rgba(15, 23, 42, 0.6); 
+  
+  /* Desfoque de fundo estilo vidro fosco */
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  
+  /* Bordas suaves */
+  padding: 0.75rem 1.5rem;
+  border-radius: 10px; 
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  margin-bottom: 4rem;
+}
+
+.divider {
+  color: #9ca3af;     
+  font-size: clamp(0.75rem, 1.5vw, 1.25rem);
+  user-select: none;  
+}
+
+/* Estilo do container dos ícones sociais */
+.socialContainer {
+  position: absolute;
+  bottom: 2rem;         
+  display: flex;
+  gap: 1.5rem;            
+  align-items: center;
+}
+
+/* Estilo individual de cada ícone */
+.socialIcon {
+  color: white;         
+  font-size: 1.75rem;    
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.socialIcon:hover {
+  color: #3386b3;       
+ 
+}
+
+
+@media (max-width: 640px) {
+  .title {
+    font-size: 2rem; /* Reduz o título para não quebrar a tela */
+  }
+
+  .subtitle {
+    font-size: 1rem;
+  }
+
+  /* 
+  .buttonGroup {
+    flex-direction: row;     
+    gap: 0.5rem;             
+    flex-wrap: nowrap;       
+  }
+
+  .button {
+    font-size: 0.75rem;      
+    padding: 0.4rem 0.6rem;
+  }
+
+  .divider {
+    display: inline-block;   
+    font-size: 0.75rem;
+    color: #4b5563;
+  }
+
+  */
+
+  .buttonGroup {
+    flex-direction: column;
+    gap: 0.75rem;            /* Espaçamento bem menor entre as opções */
+  }
+
+  .divider {
+    display: none;           /* Esconde as barras | totalmente */
+  }
+
+  .button {
+    font-size: 0.875rem;
+    padding: 0.5rem 1rem;
+  }
+}

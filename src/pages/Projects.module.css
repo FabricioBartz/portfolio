@@ -1,0 +1,121 @@
+.container {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: #0f172a; 
+  color: #ffffff;
+  padding: 3rem 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.customBackArrow {
+  color: #47baf8 !important;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.customBackArrow:hover {
+  color: #3386b3 !important;
+  transform: translateX(-3px);
+}
+
+.content {
+  width: 100%;
+  max-width: 850px;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: flex-start; 
+  
+    
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  font-weight: 800;
+  margin: 0;
+  letter-spacing: 0.1em;
+}
+
+.subtitle {
+  color: #9ca3af;
+  font-size: 1rem;
+  max-width: 600px;
+  
+  line-height: 1.5;
+}
+
+/* Barra de Pesquisa */
+.searchContainer {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin-top: 0.5rem;
+}
+
+.searchIcon {
+  position: absolute;
+  left: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #9ca3af;
+  pointer-events: none;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.85rem 1rem 0.85rem 2.75rem;
+  background-color: #1e293b; /* Slate 800 */
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  color: #ffffff;
+  font-size: 0.95rem;
+  outline: none;
+  box-sizing: border-box;
+}
+
+.searchInput:focus {
+  border-color: #47baf8;
+}
+
+.searchInput::placeholder {
+  color: #6b7280;
+}
+
+/* Container da lista (Empilha 1 card por linha) */
+.projectsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.noResults {
+  text-align: center;
+  color: #9ca3af;
+  font-size: 1rem;
+  margin-top: 2rem;
+}
+
+/* Responsividade */
+@media (max-width: 640px) {
+  .customBackArrow {
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .content {
+    margin-top: 3rem;
+  }
+}

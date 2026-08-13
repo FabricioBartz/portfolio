@@ -1,0 +1,212 @@
+.container {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background-color: #0f172a; 
+  color: #ffffff;
+  padding: 3rem 1.5rem;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+
+.customBackArrow {
+  color: #47baf8 !important;
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.customBackArrow:hover {
+  color: #3386b3 !important;
+  transform: translateX(-3px);
+}
+
+.content {
+  width: 100%;
+  max-width: 850px;
+  display: flex;
+  flex-direction: column;
+  gap: 3.5rem;
+  margin-top: 2rem;
+}
+
+
+.heroSection {
+  display: flex;
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.imageContainer {
+  flex-shrink: 0;
+}
+
+.profileImage {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #47baf8;
+  box-shadow: 0 4px 20px rgba(71, 186, 248, 0.25);
+}
+
+.heroText {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.badge {
+  background-color: rgba(71, 186, 248, 0.15);
+  color: #47baf8;
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 0.75rem;
+}
+
+.title {
+  font-size: clamp(2rem, 4vw, 2.75rem);
+  font-weight: 800;
+  margin: 0 0 0.75rem 0;
+  line-height: 1.2;
+}
+
+.subtitle {
+  color: #9ca3af;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.sectionTitle {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  border-left: 4px solid #47baf8;
+  padding-left: 0.75rem;
+  margin: 0;
+}
+
+.bioText p {
+  color: #d1d5db;
+  font-size: 1rem;
+  line-height: 1.75;
+  margin-bottom: 1rem;
+}
+
+.bioText p:last-child {
+  margin-bottom: 0;
+}
+
+.skillsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.25rem;
+}
+
+.skillCard {
+  background-color: #1e293b; 
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 10px;
+  padding: 1.5rem;
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.skillCard:hover {
+  border-color: rgba(71, 186, 248, 0.4);
+}
+
+.skillCard h3 {
+  color: #47baf8;
+  font-size: 1.1rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.skillCard p {
+  color: #9ca3af;
+  font-size: 0.95rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.ctaSection {
+  display: flex;
+  justify-content: center;
+  padding-top: 1rem;
+  gap: 1rem;
+}
+
+.downloadButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center; /* Centraliza o texto e o ícone dentro do botão */
+  gap: 0.75rem;
+  
+  /* Define largura fixa idêntica para ambos os elementos */
+  width: 260px; 
+  padding: 0.9rem 1rem;
+  
+  background-color: #47baf8;
+  color: #ffffff;
+  border-radius: 8px;
+  font-weight: 700;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.9rem;
+  text-align: center;
+  box-sizing: border-box;
+  
+  transition: background-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.downloadButton:hover {
+  background-color: #3386b3;
+}
+
+
+@media (max-width: 768px) {
+  .customBackArrow {
+    top: 1.5rem;
+    left: 1.5rem;
+  }
+
+  .content {
+    margin-top: 3rem;
+    gap: 2.5rem;
+  }
+
+  .heroSection {
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    gap: 1.5rem;
+  }
+
+  .heroText {
+    align-items: center;
+  }
+
+  .profileImage {
+    width: 150px;
+    height: 150px;
+  }
+
+  .skillsGrid {
+    grid-template-columns: 1fr;
+  }
+}
