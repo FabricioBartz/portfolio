@@ -51,47 +51,6 @@ meu-portfolio/
 └── vite.config.js
 ```
 
-## Rodando o Projeto Localmente
-
-### Pré-requisitos
-- Node.js 18+ instalado
-- Uma chave de acesso gratuita do [Web3Forms](https://web3forms.com/) (necessária para o formulário de contato funcionar)
-
-### Passos
-
-1. Clone o repositório:
-```bash
-git clone https://github.com/FabricioBartz/meu-portfolio.git
-cd meu-portfolio
-```
-
-2. Instale as dependências:
-```bash
-npm install
-```
-
-3. Crie um arquivo `.env` na raiz do projeto com sua chave do Web3Forms:
-```
-VITE_WEB3FORMS_ACCESS_KEY=sua_chave_aqui
-```
-> Esse arquivo já está no `.gitignore` e nunca deve ser commitado — cada pessoa que rodar o projeto usa sua própria chave.
-
-4. Rode o servidor de desenvolvimento:
-```bash
-npm run dev
-```
-
-5. Acesse `http://localhost:5173` no navegador.
-
-### Build de produção
-
-```bash
-npm run build
-```
-Gera os arquivos estáticos otimizados na pasta `dist/`, prontos para hospedagem (ex: GitHub Pages, Vercel, Netlify).
-
-> **Atenção ao publicar:** como o Vite "compila" a variável `VITE_WEB3FORMS_ACCESS_KEY` dentro dos arquivos finais no momento do `build`, ela precisa estar disponível **durante o processo de build** (não só localmente) — por exemplo, como *secret* configurado no GitHub Actions, se você automatizar o deploy para o GitHub Pages.
-
 ---
 
 ## Contato
