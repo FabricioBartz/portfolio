@@ -37,7 +37,7 @@ meu-portfolio/
 │   └── projects/          # Imagens dos projetos exibidos na galeria
 ├── src/
 │   ├── components/
-│   │   ├── buttons/        # Componentes de botão reutilizáveis (ex: BackArrow)
+│   │   ├── buttons/        # Componentes de botão reutilizáveis 
 │   │   └── cards/           # Cards de projeto e de habilidades
 │   ├── data/
 │   │   └── projects.js      # Lista de projetos exibidos na página "Projetos"
