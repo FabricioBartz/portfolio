@@ -8,7 +8,7 @@ const projectsData = [
     id: 1,
     title: 'AgroHub',
     category: 'Calculadora de Insumos Agrícolas',
-    description: 'Ferramenta que permite a agrônomos calcular, com agilidade, a demanda de sementes por hectare conforme a cultura selecionada.',
+    description: 'Ferramenta que permite a agrônomos calcular, com agilidade, a demanda de sementes por hectare conforme a cultura selecionada, com interface responsiva voltada para Desktop e Mobile.',
     technologies: ['React', 'Vite', 'JavaScript', 'CSS Modules'],
     githubUrl: 'https://github.com/FabricioBartz/Calculadora_de_Insumos_Agricolas',
     liveUrl: 'https://fabriciobartz.github.io/Calculadora_de_Insumos_Agricolas/',
@@ -28,11 +28,21 @@ const projectsData = [
     id: 3,
     title: 'Editor de Cena 3D',
     category: 'Editor de Cenários Tridimensionais Interativo',
-    description: 'Permite posicionar, transformar e organizar hierarquicamente modelos 3D de uma temática de Halloween, com exportação/importação de cenas em JSON.',
+    description: 'Permite posicionar, transformar e organizar hierarquicamente modelos 3D de uma temática de Halloween, com interface voltada para Desktop.',
     technologies: ['JavaScript', 'WebGL2', 'GLSL', 'HTML5 Canvas'],
     githubUrl: 'https://github.com/FabricioBartz/editorDeCena',
     liveUrl: 'https://fabriciobartz.github.io/editorDeCena/',
     imageUrl: '/projects/editor-de-cena.png'
+  },
+  {
+    id: 4,
+    title: 'Portfólio - Fabricio Fiss Bartz',
+    category: 'Portfólio Pessoal',
+    description: 'Aplicação web desenvolvida para centralizar meus projetos, trajetórias e formulário de contato integrado, com com interface responsiva voltada para Desktop e Mobile.',
+    technologies: ['React', 'Vite', 'React Router', 'CSS Modules'],
+    githubUrl: 'https://github.com/FabricioBartz/portfolio',
+    liveUrl: 'https://fabriciobartz.github.io/portfolio/',
+    imageUrl: '/projects/portfolio.png'
   }
 ];
 
