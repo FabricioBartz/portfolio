@@ -1,16 +1,3 @@
-.container {
-  min-height: 100vh;
-  min-height: 100dvh;
-  background-color: #0f172a; 
-  color: #ffffff;
-  padding: 3rem 1.5rem;
-  box-sizing: border-box;
-  display: flex;
-  justify-content: center;
-  position: relative;
-}
-
-
 .customBackArrow {
   color: #47baf8 !important;
   position: absolute;
@@ -26,7 +13,7 @@
 
 .content {
   width: 100%;
-  max-width: 850px;
+  max-width: var(--container-wide);
   display: flex;
   flex-direction: column;
   gap: 3.5rem;
@@ -145,7 +132,6 @@
 .ctaSection {
   display: flex;
   justify-content: center;
-  padding-top: 1rem;
   gap: 1rem;
 }
 
@@ -184,11 +170,6 @@
     left: 1.5rem;
   }
 
-  .content {
-    margin-top: 3rem;
-    gap: 2.5rem;
-  }
-
   .heroSection {
     flex-direction: column;
     text-align: center;
@@ -208,4 +189,5 @@
   .skillsGrid {
     grid-template-columns: 1fr;
   }
+  
 }

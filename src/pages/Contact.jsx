@@ -1,5 +1,6 @@
 import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import { FiCopy, FiCheck } from 'react-icons/fi';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 import BackArrow from '../components/buttons/BackArrow';
 import PageLayout from '../components/layout/PageLayout';
@@ -10,7 +11,7 @@ export default function ContactForm() {
   const [loading, setLoading] = useState(false);
   const captchaRef = useRef(null);
   const [token, setToken] = useState(null);
-  const [copied, setCopied] = useState(false); // Estado para controlar o aviso visual
+  const [copied, setCopied] = useState(false);
 
   const email = "fabriciofissbartz@gmail.com";
 
@@ -18,10 +19,10 @@ export default function ContactForm() {
     navigator.clipboard.writeText(email);
     setCopied(true);
 
-    // Volta ao texto original após 1 segundo
+    // Volta ao ícone original após 1.5 segundos
     setTimeout(() => {
       setCopied(false);
-    }, 1000);
+    }, 1500);
   };
 
   const onSubmit = async (event) => {
@@ -73,13 +74,23 @@ export default function ContactForm() {
             <p className={styles.description}>
               Sinta-se à vontade para entrar em contato comigo!
             </p>
-            <button 
-              type="button" 
-              onClick={handleCopyEmail} 
-              className={styles.emailLink}
-            >
-              {copied ? "Copiado!" : email}
-            </button>
+            <div className={styles.emailRow}>
+              <span className={styles.emailText}>{email}</span>
+              <div className={styles.copyWrapper}>
+                <button
+                  type="button"
+                  onClick={handleCopyEmail}
+                  className={styles.copyButton}
+                  aria-label="Copiar e-mail"
+                >
+                  {copied ? <FiCheck /> : <FiCopy />}
+                </button>
+
+                {copied && (
+                  <span className={styles.copiedTooltip}>Copiado!</span>
+                )}
+              </div>
+            </div>
           </div>
 
           {/* Formulário */}
@@ -123,12 +134,14 @@ export default function ContactForm() {
               />
             </div>
 
-            <HCaptcha
-              sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
-              reCaptchaCompat={false}
-              ref={captchaRef}
-              onVerify={(t) => setToken(t)}
-            />
+            <div className={styles.captchaWrapper}>
+              <HCaptcha
+                sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+                reCaptchaCompat={false}
+                ref={captchaRef}
+                onVerify={(t) => setToken(t)}
+              />
+            </div>
 
             <button type="submit" disabled={loading} className={styles.button}>
               {loading ? "ENVIANDO..." : "ENVIAR"}
