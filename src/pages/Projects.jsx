@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import BackArrow from '../components/buttons/BackArrow';
 import ProjectCard from '../components/cards/ProjectCard';
+import PageLayout from '../components/layout/PageLayout';
 import styles from './Projects.module.css';
 
 const projectsData = [
@@ -54,7 +55,7 @@ export default function Projects() {
   );
 
   return (
-    <div className={styles.container}>
+    <PageLayout>
       <BackArrow className={styles.customBackArrow} />
 
       <main className={styles.content}>
@@ -99,6 +100,6 @@ export default function Projects() {
           )}
         </section>
       </main>
-    </div>
+    </PageLayout>
   );
 }

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import BackArrow from '../components/buttons/BackArrow';
 import SkillsCard from '../components/cards/SkillsCard.jsx';
+import PageLayout from '../components/layout/PageLayout.jsx';
 import styles from './AboutMe.module.css'
 
 const skillsData = [
@@ -12,7 +13,7 @@ const skillsData = [
 
 function AboutMe() {
   return (
-    <div className={styles.container}>
+    <PageLayout>
       <BackArrow className={styles.custombackArrow} />
       
       <main className={styles.content}>
@@ -100,7 +101,7 @@ function AboutMe() {
             
         </section>
       </main>
-    </div>
+    </PageLayout>
   )
 }
 

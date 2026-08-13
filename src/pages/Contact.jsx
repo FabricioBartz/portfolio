@@ -1,11 +1,15 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 import BackArrow from '../components/buttons/BackArrow';
+import PageLayout from '../components/layout/PageLayout';
 import styles from './Contact.module.css';
 
 export default function ContactForm() {
   const [result, setResult] = useState("");
   const [loading, setLoading] = useState(false);
+  const captchaRef = useRef(null);
+  const [token, setToken] = useState(null);
   const [copied, setCopied] = useState(false); // Estado para controlar o aviso visual
 
   const email = "fabriciofissbartz@gmail.com";
@@ -22,12 +26,19 @@ export default function ContactForm() {
 
   const onSubmit = async (event) => {
     event.preventDefault();
+
+    if (!token) {
+      setResult("Por favor, confirme o captcha antes de enviar.");
+      return;
+    }
+
     setLoading(true);
     setResult("Enviando...");
 
     const formData = new FormData(event.target);
     const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
     formData.append("access_key", accessKey);
+    formData.append('h-captcha-response', token);
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -39,6 +50,8 @@ export default function ContactForm() {
       if (data.success) {
         setResult("Mensagem enviada com sucesso!");
         event.target.reset();
+        captchaRef.current.resetCaptcha();
+        setToken(null);
       } else {
         setResult("Ocorreu um erro ao enviar.");
       }
@@ -50,15 +63,15 @@ export default function ContactForm() {
   };
     
   return (
-    <div className={styles.wrapper}>
+    <PageLayout>
       <BackArrow />
-    <div className={styles.cardContainer}>
+      <div className={styles.cardContainer}>
         <section className={styles.container}>
           {/* Cabeçalho do Formulário */}
           <div className={styles.header}>
-            <h2 className={styles.subtitle}>CONTATO</h2>
+            <h1 className={styles.title}>CONTATO</h1>
             <p className={styles.description}>
-              Estou sempre aberto a novas oportunidades e projetos interessantes. Sinta-se à vontade para entrar em contato comigo!
+              Sinta-se à vontade para entrar em contato comigo!
             </p>
             <button 
               type="button" 
@@ -110,6 +123,13 @@ export default function ContactForm() {
               />
             </div>
 
+            <HCaptcha
+              sitekey="50b2fe65-b00b-4b9e-ad62-3ba471098be2"
+              reCaptchaCompat={false}
+              ref={captchaRef}
+              onVerify={(t) => setToken(t)}
+            />
+
             <button type="submit" disabled={loading} className={styles.button}>
               {loading ? "ENVIANDO..." : "ENVIAR"}
             </button>
@@ -118,6 +138,6 @@ export default function ContactForm() {
           </form>
         </section>
       </div>
-    </div>
+    </PageLayout>
   );
 }
