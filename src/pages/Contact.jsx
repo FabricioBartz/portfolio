@@ -36,10 +36,16 @@ export default function ContactForm() {
     setLoading(true);
     setResult("Enviando...");
 
-    const formData = new FormData(event.target);
+    const form = event.target;
     const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
+
+    const formData = new FormData();
     formData.append("access_key", accessKey);
-    formData.append('h-captcha-response', token);
+    formData.append("name", form.name.value);
+    formData.append("email", form.email.value);
+    formData.append("subject", form.subject.value);
+    formData.append("message", form.message.value);
+    formData.append("h-captcha-response", token);
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
