@@ -34,7 +34,7 @@ export default function ContactForm() {
     }
 
     setLoading(true);
-    setResult("Enviando...");
+    setResult();
 
     const form = event.target;
     const accessKey = import.meta.env.VITE_WEB3FORMS_ACCESS_KEY;
