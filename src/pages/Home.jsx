@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { FaGithub, FaLinkedin } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaUser, FaCode, FaEnvelope, FaChevronRight } from 'react-icons/fa'
 import styles from './Home.module.css'
 
 function Home() {
@@ -9,46 +9,58 @@ function Home() {
       <p className={styles.subtitle}>
         FULL-STACK DEVELOPER
       </p>
-        <div className={styles.buttonGroup}>
-            <Link to="/sobre" className={styles.button}>
-                sobre mim
-            </Link>
 
-            <span className={styles.divider}>|</span>
+      <div className={styles.buttonGroup}>
+        <Link to="/sobre" className={styles.button}>
+          <div className={styles.buttonContent}>
+            <FaUser className={styles.btnIcon} />
+            <span>Sobre Mim</span>
+          </div>
+          <FaChevronRight className={styles.arrowIcon} />
+        </Link>
 
-            <Link to="/projetos" className={styles.button}>
-                Meus projetos
-            </Link>
+        <span className={styles.divider}>|</span>
 
-            <span className={styles.divider}>|</span>
+        <Link to="/projetos" className={styles.button}>
+          <div className={styles.buttonContent}>
+            <FaCode className={styles.btnIcon} />
+            <span>Meus Projetos</span>
+          </div>
+          <FaChevronRight className={styles.arrowIcon} />
+        </Link>
 
-            <Link to="/contato" className={styles.button}>
-                contato
-            </Link>
-        </div>
+        <span className={styles.divider}>|</span>
 
-        <div className={styles.socialContainer}>
-            <a 
-            href="https://github.com/FabricioBartz" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className={styles.socialIcon}
-            aria-label="GitHub"
-            >
-            <FaGithub />
-            </a>
+        <Link to="/contato" className={styles.button}>
+          <div className={styles.buttonContent}>
+            <FaEnvelope className={styles.btnIcon} />
+            <span>Contato</span>
+          </div>
+          <FaChevronRight className={styles.arrowIcon} />
+        </Link>
+      </div>
 
-            <a 
-            href="https://linkedin.com/in/fabriciofissbartz" 
-            target="_blank" 
-            rel="noopener noreferrer" 
-            className={styles.socialIcon}
-            aria-label="LinkedIn"
-            >
-            <FaLinkedin />
-            </a>
-        </div>
+      <div className={styles.socialContainer}>
+        <a 
+          href="https://github.com/FabricioBartz" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className={styles.socialIcon}
+          aria-label="GitHub"
+        >
+          <FaGithub />
+        </a>
 
+        <a 
+          href="https://linkedin.com/in/fabriciofissbartz" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className={styles.socialIcon}
+          aria-label="LinkedIn"
+        >
+          <FaLinkedin />
+        </a>
+      </div>
     </div>
   )
 }

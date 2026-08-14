@@ -39,18 +39,21 @@ function AboutMe() {
         {/* Seção Minha Trajetória */}
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Minha Trajetória</h2>
-          <div className={styles.bioText}>
+          <div className={styles.quoteText}>
             <p>
               Minha jornada acadêmica começou na Engenharia Civil, onde desenvolvi uma forte base analítica, disciplina e capacidade de resolução de problemas complexos. Ao migrar para a Ciência da Computação na Universidade Federal de Pelotas (UFPel), direcionei essa bagagem lógica para a construção de softwares e sistemas web.
             </p>
             <p>
               Atualmente, dedico meus estudos à aplicação prática de conceitos de desenvolvimento de software. Crio projetos completos integrando interfaces reativas no front-end (React, Vite) com arquiteturas robustas no back-end (Java, Spring Boot e bancos de dados SQL). Além das linguagens tradicionais, integro ativamente ferramentas de IA Generativa (ChatGPT, Gemini e Claude) no meu fluxo de trabalho para acelerar pesquisas de documentação, refatorar códigos e otimizar processos de debug.
             </p>
+          </div>
+        </section>
+
+        <section className={styles.section}>
+          <h2 className={styles.sectionTitle}>Além do Código</h2>
+          <div className={styles.quoteText}>
             <p>
-              Minhas raízes na agricultura familiar me deram uma visão prática sobre resiliência, ética de trabalho e o valor do trabalho em equipe. Essa vivência no setor produtivo me ajuda a entender as necessidades do usuário final e a encarar desafios operacionais com foco em soluções práticas.
-            </p>
-            <p>
-              Além disso, possuo experiência na gestão de canais digitais e edição de conteúdo para o YouTube, o que aprimorou minha comunicação técnica, organização de processos e visão orientada à experiência do usuário.
+              Nas minhas horas vagas, sou um entusiasta de games, séries e animes, além de acompanhar partidas de futebol sempre que possível. Trago também uma bagagem no campo com a agricultura familiar e na criação de conteúdo audiovisual, gerenciando e editando vídeos para o YouTube.
             </p>
           </div>
         </section>
