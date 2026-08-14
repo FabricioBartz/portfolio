@@ -97,4 +97,14 @@
     top: 1.5rem;
     left: 1.5rem;
   }
+
+ .title {
+    letter-spacing: 0.05em;
+  }
+}
+
+@media (max-width: 480px) {
+  .title {
+    letter-spacing: 0.05em;
+  }
 }

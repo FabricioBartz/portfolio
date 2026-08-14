@@ -214,6 +214,10 @@
     transform: translateX(-50%);
     animation: fadeInMobile 0.2s ease forwards;
   }
+
+  .title {
+    letter-spacing: 0.05em;
+  }
 }
 
 @keyframes fadeInMobile {
