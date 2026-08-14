@@ -1,9 +1,11 @@
 import { useState, useRef } from 'react';
 import { Link } from 'react-router-dom';
 import { FiCopy, FiCheck } from 'react-icons/fi';
+import { FaPaperPlane } from 'react-icons/fa';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 import BackArrow from '../components/buttons/BackArrow';
 import PageLayout from '../components/layout/PageLayout';
+import Button from '../components/buttons/Buttom.jsx';
 import styles from './Contact.module.css';
 
 export default function ContactForm() {
@@ -150,9 +152,13 @@ export default function ContactForm() {
               />
             </div>
 
-            <button type="submit" disabled={loading} className={styles.button}>
-              {loading ? "ENVIANDO..." : "ENVIAR"}
-            </button>
+            <Button 
+              type="submit" 
+              variant="primary" 
+              icon={FaPaperPlane}
+            >
+              Enviar Mensagem
+            </Button>
 
             {result && <p className={styles.statusMessage}>{result}</p>}
           </form>

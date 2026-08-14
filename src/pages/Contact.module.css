@@ -100,31 +100,6 @@
   color: #888888;
 }
 
-/* Botão Enviar */
-.button {
-  width: 100%;
-  padding: 0.9rem;
-  margin-top: 1rem;
-  background-color: #47baf8; 
-  color: #ffffff;
-  border: none;
-  border-radius: 8px;
-  font-size: 0.9rem;
-  font-weight: 700;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-  cursor: pointer;
-  transition: background-color 0.2s ease, opacity 0.2s ease;
-}
-
-.button:hover {
-  background-color: #3386b3;
-}
-
-.button:disabled {
-  opacity: 0.6;
-  cursor: not-allowed;
-}
 
 /* Mensagem de Feedback */
 .statusMessage {
@@ -200,6 +175,10 @@
   white-space: nowrap;
   pointer-events: none;
   animation: fadeIn 0.2s ease forwards;
+}
+
+.btn{
+  width: 100% !important; 
 }
 
 @keyframes fadeIn {

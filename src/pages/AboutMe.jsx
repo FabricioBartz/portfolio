@@ -1,25 +1,38 @@
-import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { FaDownload, FaEnvelope } from 'react-icons/fa';
 import BackArrow from '../components/buttons/BackArrow';
-import SkillsCard from '../components/cards/SkillsCard.jsx';
 import PageLayout from '../components/layout/PageLayout.jsx';
-import styles from './AboutMe.module.css'
+import Button from '../components/buttons/Buttom.jsx';
+import styles from './AboutMe.module.css';
 
 const skillsData = [
-  { id: 1, title: 'Front-end', technologies: 'React JS, JavaScript, HTML, CSS.' },
-  { id: 2, title: 'Back-end & Banco de Dados', technologies: 'Java, Spring Boot, Python, MySQL, PostgreSQL.' },
-  { id: 3, title: 'Ferramentas & Produtividade', technologies: 'Git, GitHub, AI-Assisted Development (ChatGPT, Gemini, Claude).' }
+  { 
+    id: 1, 
+    title: 'Front-end', 
+    techs: ['React JS', 'JavaScript', 'HTML5', 'CSS Modules', 'Vite'] 
+  },
+  { 
+    id: 2, 
+    title: 'Back-end & Banco de Dados', 
+    techs: ['Java', 'Spring Boot', 'Python', 'MySQL', 'PostgreSQL', 'Maven'] 
+  },
+  { 
+    id: 3, 
+    title: 'Ferramentas & IA', 
+    techs: ['Git', 'GitHub', 'ChatGPT', 'Gemini', 'Claude', 'VS Code'] 
+  }
 ];
 
 function AboutMe() {
   return (
     <PageLayout>
-      <BackArrow className={styles.custombackArrow} />
+      <BackArrow className={styles.customBackArrow} />
       
       <main className={styles.content}>
-        {/* Seção Principal: Foto + Apresentação */}
+        {/* Hero Section */}
         <section className={styles.heroSection}>
-          <div className={styles.imageContainer}>
+          <div className={styles.imageWrapper}>
+            <div className={styles.imageGlow}></div>
             <img 
               src="https://github.com/FabricioBartz.png" 
               alt="Foto de Fabricio Fiss Bartz" 
@@ -28,18 +41,18 @@ function AboutMe() {
           </div>
           
           <div className={styles.heroText}>
-            <span className={styles.badge}>Full Stack Developer</span>
+            <span className={styles.badge}>Full-Stack Developer</span>
             <h1 className={styles.title}>Fabricio Fiss Bartz</h1>
             <p className={styles.subtitle}>
-              Estudante de Ciência da Computação (UFPel).
+              Estudante de Ciência da Computação (UFPel) &bull; Pelotas, RS
             </p>
           </div>
         </section>
 
-        {/* Seção Minha Trajetória */}
+        {/* Minha Trajetória */}
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Minha Trajetória</h2>
-          <div className={styles.quoteText}>
+          <div className={styles.bioText}>
             <p>
               Minha jornada acadêmica começou na Engenharia Civil, onde desenvolvi uma forte base analítica, disciplina e capacidade de resolução de problemas complexos. Ao migrar para a Ciência da Computação na Universidade Federal de Pelotas (UFPel), direcionei essa bagagem lógica para a construção de softwares e sistemas web.
             </p>
@@ -49,63 +62,56 @@ function AboutMe() {
           </div>
         </section>
 
+        {/* Além do Código */}
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Além do Código</h2>
-          <div className={styles.quoteText}>
-            <p>
-              Nas minhas horas vagas, sou um entusiasta de games, séries e animes, além de acompanhar partidas de futebol sempre que possível. Trago também uma bagagem no campo com a agricultura familiar e na criação de conteúdo audiovisual, gerenciando e editando vídeos para o YouTube.
-            </p>
-          </div>
+          <blockquote className={styles.quoteText}>
+            "Nas minhas horas vagas, sou um entusiasta de games, séries e animes, além de acompanhar partidas de futebol sempre que possível. Trago também uma bagagem no campo com a agricultura familiar e na criação de conteúdo audiovisual, gerenciando e editando vídeos para o YouTube."
+          </blockquote>
         </section>
 
-        {/* Seção Habilidades / Tech Stack */}
+        {/* Tech Stack com Tags Modernas */}
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Conhecimentos & Tecnologias</h2>
           
           <div className={styles.skillsGrid}>
             {skillsData.map((skill) => (
-              <SkillsCard 
-                key={skill.id} 
-                title={skill.title} 
-                technologies={skill.technologies} 
-              />
+              <div key={skill.id} className={styles.skillCard}>
+                <h3>{skill.title}</h3>
+                <div className={styles.techTags}>
+                  {skill.techs.map((tech, index) => (
+                    <span key={index} className={styles.tag}>{tech}</span>
+                  ))}
+                </div>
+              </div>
             ))}
           </div>
         </section>
 
-        {/* Seção de Call To Action (Download do CV) */}
+        {/* Call To Action com Hierarquia Primária / Secundária */}
         <section className={styles.ctaSection}>
-          <a 
-            href="./downloads/curriculo-fabricio-bartz.pdf" 
+           {/* Botão de Download (Tag <a>) */}
+          <Button 
+            variant="primary"
+            href="./downloads/curriculo-fabricio-bartz.pdf"
             download="Curriculo_Fabricio_Bartz.pdf"
-            className={styles.downloadButton}
+            icon={FaDownload}
           >
-            <svg 
-              width="20" 
-              height="20" 
-              viewBox="0 0 24 24" 
-              fill="none" 
-              stroke="currentColor" 
-              strokeWidth="2" 
-              strokeLinecap="round" 
-              strokeLinejoin="round"
-            >
-              <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
-              <polyline points="7 10 12 15 17 10" />
-              <line x1="12" y1="15" x2="12" y2="3" />
-            </svg>
             Baixar Currículo
-          </a>
+          </Button>
 
-            <Link to="/contato" className={styles.downloadButton}>
-              contato
-            </Link>
-          
-            
+          {/* Botão de Navegação (Tag <Link>) */}
+          <Button 
+            variant="secondary"
+            to="/contato"
+            icon={FaEnvelope}
+          >
+            Fale Comigo
+          </Button>
         </section>
       </main>
     </PageLayout>
-  )
+  );
 }
 
-export default AboutMe
+export default AboutMe;
