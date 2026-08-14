@@ -8,3 +8,15 @@
   justify-content: center;
   padding: 3.5rem;
 }
+
+@media (max-width: 768px) {
+  .pageWrapper {
+    padding: 5rem 1.5rem 2.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .pageWrapper {
+    padding: 4.5rem 1rem 2rem;
+  }
+}
