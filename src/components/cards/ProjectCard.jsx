@@ -1,4 +1,5 @@
 import React from 'react';
+import { FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 import styles from './ProjectCard.module.css';
 
 export default function ProjectCard({ project }) {
@@ -6,10 +7,14 @@ export default function ProjectCard({ project }) {
 
   return (
     <article className={styles.projectCard}>
-      {/* Imagem Lateral Esquerda */}
+      {/* Imagem Lateral Esquerda / Topo no mobile */}
       {imageUrl && (
         <div className={styles.imageWrapper}>
-          <img src={imageUrl} alt={`Capa do projeto ${title}`} className={styles.coverImage} />
+          <img 
+            src={imageUrl} 
+            alt={`Capa do projeto ${title}`} 
+            className={styles.coverImage} 
+          />
         </div>
       )}
 
@@ -35,16 +40,17 @@ export default function ProjectCard({ project }) {
           </div>
         )}
 
-        {/* Botões de Ação */}
+        {/* Botões de Ação com Ícones */}
         <div className={styles.cardActions}>
           {githubUrl && (
             <a 
               href={githubUrl} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className={styles.actionButton}
+              className={styles.secondaryButton}
             >
-              GitHub
+              <FaGithub className={styles.btnIcon} />
+              <span>Código</span>
             </a>
           )}
           {liveUrl && (
@@ -52,9 +58,10 @@ export default function ProjectCard({ project }) {
               href={liveUrl} 
               target="_blank" 
               rel="noopener noreferrer" 
-              className={`${styles.actionButton} ${styles.primaryButton}`}
+              className={styles.primaryButton}
             >
-              Ver Projeto Online
+              <FaExternalLinkAlt className={styles.btnIcon} />
+              <span>Ver Online</span>
             </a>
           )}
         </div>

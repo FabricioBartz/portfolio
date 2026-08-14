@@ -66,7 +66,7 @@ function AboutMe() {
         <section className={styles.section}>
           <h2 className={styles.sectionTitle}>Além do Código</h2>
           <blockquote className={styles.quoteText}>
-            "Nas minhas horas vagas, sou um entusiasta de games, séries e animes, além de acompanhar partidas de futebol sempre que possível. Trago também uma bagagem no campo com a agricultura familiar e na criação de conteúdo audiovisual, gerenciando e editando vídeos para o YouTube."
+            Nas minhas horas vagas, sou um entusiasta de games, séries e animes, além de acompanhar partidas de futebol sempre que possível. Trago também uma bagagem no campo com a agricultura familiar e na criação de conteúdo audiovisual, gerenciando e editando vídeos para o YouTube.
           </blockquote>
         </section>
 

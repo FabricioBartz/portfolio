@@ -1,22 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap');
 
-/* ========================================================
-   ESTRUTURA GERAL & BOTÃO VOLTAR
-======================================================== */
-.customBackArrow {
-  color: #47baf8 !important;
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-  transition: color 0.2s ease, transform 0.2s ease;
-  z-index: 10;
-}
-
-.customBackArrow:hover {
-  color: #3386b3 !important;
-  transform: translateX(-3px);
-}
-
 .content {
   width: 100%;
   max-width: var(--container-wide, 900px);
@@ -28,9 +11,6 @@
   box-sizing: border-box;
 }
 
-/* ========================================================
-   HERO SECTION MODERNA (Foto + Glow + Apresentação)
-======================================================== */
 .heroSection {
   display: flex;
   align-items: center;
@@ -99,14 +79,6 @@
   margin-bottom: 0.35rem;
 }
 
-.statusDot {
-  width: 8px;
-  height: 8px;
-  background-color: #22c55e;
-  border-radius: 50%;
-  box-shadow: 0 0 8px #22c55e;
-  animation: pulse 2s infinite;
-}
 
 @keyframes pulse {
   0% {
@@ -151,9 +123,7 @@
   margin: 0.25rem 0 0 0;
 }
 
-/* ========================================================
-   SEÇÕES & CONTEÚDO TEXTUAL
-======================================================== */
+
 .section {
   display: flex;
   flex-direction: column;
@@ -192,9 +162,6 @@
   margin: 0.5rem 0 0 0;
 }
 
-/* ========================================================
-   SKILLS CARDS (Glassmorphism + Badges/Tags)
-======================================================== */
 .skillsGrid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
@@ -250,9 +217,7 @@
   background: rgba(30, 41, 59, 1);
 }
 
-/* ========================================================
-   CTA BUTTONS (Download CV + Contato)
-======================================================== */
+
 .ctaSection {
   display: flex;
   justify-content: center;
@@ -265,9 +230,7 @@
   width: 240px !important;
 }
  
-/* ========================================================
-   RESPONSIVIDADE MOBILE
-======================================================== */
+
 @media (max-width: 768px) {
   .customBackArrow {
     top: 1.25rem;
