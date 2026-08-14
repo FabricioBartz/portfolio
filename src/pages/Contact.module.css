@@ -178,10 +178,6 @@
   animation: fadeIn 0.2s ease forwards;
 }
 
-.btn{
-  width: 100% !important; 
-}
-
 @keyframes fadeIn {
   from { opacity: 0; transform: translate(-4px, -50%); }
   to { opacity: 1; transform: translate(0, -50%); }
@@ -198,6 +194,10 @@
   .title {
     letter-spacing: 0.05em;
   }
+}
+
+.cardContainer {
+  padding: 0.5rem 1.5rem 4rem 1.5rem;
 }
 
 @keyframes fadeInMobile {
