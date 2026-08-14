@@ -13,7 +13,7 @@ const projectsData = [
     technologies: ['React', 'Vite', 'JavaScript', 'CSS Modules'],
     githubUrl: 'https://github.com/FabricioBartz/Calculadora_de_Insumos_Agricolas',
     liveUrl: 'https://fabriciobartz.github.io/Calculadora_de_Insumos_Agricolas/',
-    imageUrl: '/projects/agrohub.png' 
+    imageUrl: './projects/agrohub.png' 
   },
   {
     id: 2,
@@ -23,7 +23,7 @@ const projectsData = [
     technologies: ['Java', 'Spring Boot', 'MySQL', 'Maven'],
     githubUrl: 'https://github.com/FabricioBartz/Academia-Fatout',
     liveUrl: 'https://academia-fatout.onrender.com/',
-    imageUrl: '/projects/academia-fatout.png'
+    imageUrl: './projects/academia-fatout.png'
   },
   {
     id: 3,
@@ -33,7 +33,7 @@ const projectsData = [
     technologies: ['JavaScript', 'WebGL2', 'GLSL', 'HTML5 Canvas'],
     githubUrl: 'https://github.com/FabricioBartz/editorDeCena',
     liveUrl: 'https://fabriciobartz.github.io/editorDeCena/',
-    imageUrl: '/projects/editor-de-cena.png'
+    imageUrl: './projects/editor-de-cena.png'
   },
   {
     id: 4,
@@ -43,7 +43,7 @@ const projectsData = [
     technologies: ['React', 'Vite', 'React Router', 'CSS Modules'],
     githubUrl: 'https://github.com/FabricioBartz/portfolio',
     liveUrl: 'https://fabriciobartz.github.io/portfolio/',
-    imageUrl: '/projects/portfolio.png'
+    imageUrl: './projects/portfolio.png'
   }
 ];
 
