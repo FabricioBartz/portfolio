@@ -1,17 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-.customBackArrow {
-  color: #47baf8 !important;
-  position: absolute;
-  top: 2rem;
-  left: 2rem;
-  transition: color 0.2s ease, transform 0.2s ease;
-  z-index: 10;
-}
-
-.customBackArrow:hover {
-  color: #3386b3 !important;
-  transform: translateX(-3px);
-}
 
 .content {
   width: 100%;
@@ -24,9 +11,6 @@
   box-sizing: border-box;
 }
 
-/* ========================================================
-   CABEÇALHO (Título, Subtítulo e Busca)
-======================================================== */
 .header {
   display: flex;
   flex-direction: column;
@@ -41,7 +25,7 @@
   margin: 0;
   line-height: 1.2;
   letter-spacing: -0.01em;
-  background: linear-gradient(180deg, #ffffff 0%, #cbd5e1 100%);
+  background: #ffffff;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -54,9 +38,6 @@
   margin: 0;
 }
 
-/* ========================================================
-   INPUT DE PESQUISA (Glassmorphism Moderno)
-======================================================== */
 .searchContainer {
   position: relative;
   width: 100%;
@@ -105,9 +86,6 @@
   font-size: 0.9rem;
 }
 
-/* ========================================================
-   LISTA DE PROJETOS & FEEDBACK VAZIO
-======================================================== */
 .projectsList {
   display: flex;
   flex-direction: column;
@@ -125,9 +103,6 @@
   border-radius: 12px;
 }
 
-/* ========================================================
-   RESPONSIVIDADE MOBILE
-======================================================== */
 @media (max-width: 640px) {
   .customBackArrow {
     top: 1.25rem;
@@ -135,7 +110,7 @@
   }
 
   .content {
-    padding: 2rem 1rem 3rem 1rem; /* Espaço para não cobrir o título com a seta */
+    padding: 2rem 1rem 3rem 1rem; 
     gap: 2rem;
   }
 
