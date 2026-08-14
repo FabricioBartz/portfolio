@@ -73,7 +73,7 @@ function AboutMe() {
         {/* Seção de Call To Action (Download do CV) */}
         <section className={styles.ctaSection}>
           <a 
-            href="/downloads/curriculo-fabricio-bartz.pdf" 
+            href="./downloads/curriculo-fabricio-bartz.pdf" 
             download="Curriculo_Fabricio_Bartz.pdf"
             className={styles.downloadButton}
           >
