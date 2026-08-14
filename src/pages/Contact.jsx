@@ -55,6 +55,7 @@ export default function ContactForm() {
         setToken(null);
       } else {
         setResult("Ocorreu um erro ao enviar.");
+        console.error("Web3Forms error:", data);
       }
     } catch (error) {
       setResult("Erro de conexão. Tente novamente.");
