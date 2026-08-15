@@ -26,7 +26,7 @@ body {
 
 body::before {
   content: '';
-  position: fixed; /* 'fixed' garante que o fundo cubra a tela mesmo ao rolar a página */
+  position: fixed; 
   top: 0;
   left: 0;
   width: 100vw;
