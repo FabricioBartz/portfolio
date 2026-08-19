@@ -39,7 +39,7 @@ const projectsData = [
     id: 4,
     title: 'Portfólio - Fabricio Fiss Bartz',
     category: 'Portfólio Pessoal',
-    description: 'Aplicação web desenvolvida para centralizar meus projetos, trajetórias e formulário de contato integrado, com interface responsiva voltada para Desktop e Mobile.',
+    description: 'Aplicação web desenvolvida para centralizar meus projetos, trajetórias e formulário de contato, integrado com interface responsiva voltada para Desktop e Mobile.',
     technologies: ['React', 'Vite', 'React Router', 'CSS Modules'],
     githubUrl: 'https://github.com/FabricioBartz/portfolio',
     liveUrl: 'https://fabriciobartz.github.io/portfolio/',
