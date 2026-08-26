@@ -8,7 +8,6 @@
   font-weight: 700;
   text-decoration: none;
   font-size: 0.875rem;
-  text-transform: uppercase;
   letter-spacing: 0.05em;
   box-sizing: border-box;
   cursor: pointer;
@@ -21,16 +20,19 @@
   font-size: 1rem;
 }
 
-/* Variante Primária: Gradiente Azul Iluminado */
 .primary {
-  background: linear-gradient(135deg, #47baf8 0%, #2563eb 100%);
+  background-color: #0284c7;
   color: #ffffff;
-  box-shadow: 0 4px 15px rgba(37, 99, 235, 0.35);
+  border: 1px solid rgba(56, 189, 248, 0.3);
+  box-shadow: 0 4px 12px rgba(2, 132, 199, 0.25);
+  transition: all 0.2s ease;
 }
 
 .primary:hover {
+  background-color: #0369a1;
+  border-color: rgba(56, 189, 248, 0.6);
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(71, 186, 248, 0.45);
+  box-shadow: 0 6px 16px rgba(2, 132, 199, 0.35);
 }
 
 .primary:active {
