@@ -7,6 +7,14 @@
   display: flex;
   justify-content: center;
   padding: 3.5rem;
+  background-image: radial-gradient(
+    circle at 85% 10%, 
+    rgba(56, 189, 248, 0.15) 0%, 
+    rgba(2, 132, 199, 0.05) 35%, 
+    transparent 70%
+  );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 @media (max-width: 768px) {
