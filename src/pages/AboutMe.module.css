@@ -55,7 +55,6 @@
 }
 
 .imageWrapper:hover .profileImage {
-  transform: translateY(-2px);
   border-color: #47baf8;
 }
 
@@ -183,7 +182,6 @@
 }
 
 .skillCard:hover {
-  transform: translateY(-3px);
   border-color: rgba(71, 186, 248, 0.4);
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
 }
