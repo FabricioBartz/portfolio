@@ -13,8 +13,8 @@ const skillsData = [
   },
   { 
     id: 2, 
-    title: 'Back-end & Banco de Dados', 
-    techs: ['Java', 'Python', 'MySQL', 'PostgreSQL', 'Maven'] 
+    title: 'Back-end & Dados', 
+    techs: ['Java', 'Python', 'C', 'MySQL', 'PostgreSQL'] 
   },
   { 
     id: 3, 
