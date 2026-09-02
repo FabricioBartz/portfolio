@@ -12,10 +12,10 @@ export default function PageLayout({ children }) {
         <p>© 2026 Fabricio Fiss Bartz. Todos os direitos reservados.</p>
         <div className={styles.footerLinks}>
           <a href="https://github.com/FabricioBartz" target="_blank" rel="noreferrer">GitHub</a>
-          <span>•</span>
+          <span>&bull;</span>
           <a href="https://linkedin.com/in/fabriciofissbartz" target="_blank" rel="noreferrer">LinkedIn</a>
-          <span>•</span>
-          <Link to="/contato" target="_blank" rel="noreferrer">Contato</Link>
+          <span>&bull;</span>
+          <Link to="/contato">Contato</Link>
         </div>
       </footer>
     </div>

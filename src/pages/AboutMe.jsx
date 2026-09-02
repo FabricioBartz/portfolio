@@ -3,23 +3,24 @@ import { FaDownload, FaEnvelope } from 'react-icons/fa';
 import BackArrow from '../components/buttons/BackArrow';
 import PageLayout from '../components/layout/PageLayout.jsx';
 import Button from '../components/buttons/Buttom.jsx';
+import ProjectCard from '../components/cards/ProjectCard.jsx';
 import styles from './AboutMe.module.css';
 
 const skillsData = [
   { 
     id: 1, 
     title: 'Front-end', 
-    techs: ['React JS', 'JavaScript', 'HTML5', 'CSS Modules', 'Vite'] 
+    techs: ['React JS', 'JavaScript', 'HTML5', 'Vite', 'CSS Modules'] 
   },
   { 
     id: 2, 
     title: 'Back-end & Dados', 
-    techs: ['Java', 'Python', 'C', 'MySQL', 'PostgreSQL'] 
+    techs: ['Java', 'C','Python', 'MySQL', 'PostgreSQL'] 
   },
   { 
     id: 3, 
     title: 'Ferramentas & IA', 
-    techs: ['Git', 'GitHub', 'ChatGPT', 'Gemini', 'Claude', 'VS Code'] 
+    techs: ['Git', 'GitHub', 'VS Code', 'ChatGPT', 'Gemini', 'Claude'] 
   }
 ];
 
