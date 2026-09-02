@@ -5,8 +5,9 @@
   color: #ffffff;
   box-sizing: border-box;
   display: flex;
-  justify-content: center;
-  padding: 3.5rem;
+  flex-direction: column; /* Alterado para empilhar conteúdo e footer */
+  align-items: center; /* Centraliza horizontalmente os elementos filhos */
+  padding: 3.5rem 3.5rem 0; /* Removido o padding inferior para o footer encostar embaixo */
   background-image: radial-gradient(
     circle at 85% 10%, 
     rgba(56, 189, 248, 0.15) 0%, 
@@ -17,14 +18,55 @@
   background-attachment: fixed;
 }
 
+.mainContent {
+  flex: 1; /* Faz o conteúdo principal ocupar todo o espaço disponível */
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center
+}
+
+/* Estilização do Footer */
+.footer {
+  width: 100%;
+  max-width: 1200px;
+  margin-top: 4rem;
+  padding: 2rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  color: #94a3b8;
+  font-size: 0.875rem;
+  text-align: center;
+}
+
+.footerLinks {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.footerLinks a {
+  color: #38bdf8;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.footerLinks a:hover {
+  opacity: 0.8;
+}
+
 @media (max-width: 768px) {
   .pageWrapper {
-    padding: 5rem 1.5rem 2.5rem;
+    padding: 5rem 1.5rem 0;
   }
 }
 
 @media (max-width: 480px) {
   .pageWrapper {
-    padding: 4.5rem 1rem 2rem;
+    padding: 4.5rem 1rem 0;
   }
 }
