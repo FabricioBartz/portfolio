@@ -24,10 +24,10 @@ Site pessoal desenvolvido com navegação por rotas, dividido em quatro seções
 | Biblioteca UI | React 19 |
 | Build tool | Vite |
 | Roteamento | React Router DOM 7 |
-| Estilização | CSS Modules + Tailwind CSS 4 |
+| Estilização | CSS Modules |
 | Ícones | React Icons |
 | Envio de formulário | Web3Forms (API externa, sem backend próprio) |
-| Lint | oxlint |
+
 
 ## Estrutura do Projeto
 
@@ -50,6 +50,12 @@ meu-portfolio/
 │   └── main.jsx                    # Ponto de entrada da aplicação
 └── vite.config.js
 ```
+---
+
+## Como Executar o Projeto
+
+### Pré-requisitos
+Antes de começar, você precisará ter instalado em sua máquina o [Node.js](https://nodejs.org/) (versão LTS recomendada) e o [Git](https://git-scm.com/).
 
 ---
 
