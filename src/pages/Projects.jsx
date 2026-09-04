@@ -9,7 +9,7 @@ const projectsData = [
     id: 1,
     title: 'AgroHub',
     category: 'Calculadora de Insumos Agrícolas',
-    description: 'Ferramenta que permite a agricultores calcular com agilidade a demanda de sementes por hectare conforme a cultura selecionada, através de uma interface responsiva voltada para mobile e desktop.',
+    description: 'Aplicação web que permite a agricultores calcular com agilidade a demanda de sementes por hectare conforme a cultura selecionada, através de uma interface responsiva voltada para mobile e desktop.',
     technologies: ['React', 'Vite', 'JavaScript', 'CSS Modules'],
     githubUrl: 'https://github.com/FabricioBartz/Calculadora_de_Insumos_Agricolas',
     liveUrl: 'https://fabriciobartz.github.io/Calculadora_de_Insumos_Agricolas/',
