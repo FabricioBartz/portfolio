@@ -19,7 +19,7 @@ const projectsData = [
     id: 2,
     title: 'Academia-Fatout',
     category: 'Sistema de Gestão para Academias',
-    description: 'Sistema de gestão para academias com controle de alunos, matrículas e planos de treino, com interface voltada para Desktop.',
+    description: 'Sistema web full-stack de gestão para academias com interface voltada para desktop. Desenvolvido para o controle completo de alunos, instrutores, matrículas, avaliações físicas e planos de treino, com dados armazenados em banco MySQL e deploy containerizado via Docker.',
     technologies: ['Java', 'Spring Boot', 'MySQL', 'Maven'],
     githubUrl: 'https://github.com/FabricioBartz/Academia-Fatout',
     liveUrl: 'https://academia-fatout.onrender.com/',
